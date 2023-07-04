@@ -15,7 +15,7 @@ def solution(clothes):
     from functools import reduce
     cnt = Counter([kind for name, kind in clothes])
     # reduce함수(함수, 반복할 데이터, 초기값). 초기 값 설정 하면 x는 초깃값, 아니면 반복데이터에서 순서대로 x,y 
-    
+    #reduce(lambda x, y: x*(y+1), lst, 1)은 리스트 lst의 각 요소 y를 순회하면서 이전까지의 집계 결과 x에 (y+1)을 곱한 값을 계산
     
     answer = reduce(lambda x, y: x*(y+1), cnt.values(),1) - 1   
 
